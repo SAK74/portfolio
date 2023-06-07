@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline } from "@mui/material";
+import { Layout } from "./pages/Layout";
+import {
+  Routes,
+  RouteObject,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { MainPage } from "./pages/MainPage";
+
+const routes: RouteObject[] = [
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "home",
+        element: <MainPage />,
+      },
+    ],
+  },
+];
+
+const router = createBrowserRouter(routes);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      {/* <Routes>
+      <Layout />
+      </Routes> */}
+      <RouterProvider router={router} />
+    </>
   );
 }
 
