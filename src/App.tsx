@@ -1,12 +1,12 @@
 import { CssBaseline } from "@mui/material";
 import { Layout } from "./pages/Layout";
 import {
-  Routes,
   RouteObject,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import { MainPage } from "./pages/MainPage";
+import { CircularProgress } from "@mui/material";
 
 const routes: RouteObject[] = [
   {
@@ -27,10 +27,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      {/* <Routes>
-      <Layout />
-      </Routes> */}
-      <RouterProvider router={router} />
+      <RouterProvider router={router} fallbackElement={<CircularProgress />} />
     </>
   );
 }

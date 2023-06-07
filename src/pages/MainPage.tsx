@@ -1,3 +1,11 @@
+import { Paper, useTheme } from "@mui/material";
+
 export const MainPage = () => {
-  return <>Main Page</>;
+  const theme = useTheme();
+  console.log(theme);
+  return (
+    <>
+      <Paper>Main Page</Paper>
+    </>
+  );
 };
