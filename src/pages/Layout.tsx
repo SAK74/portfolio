@@ -6,7 +6,9 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import { useState } from "react";
-import { Offset, TopBar } from "../components/TopBar";
+import { Offset, TopBar } from "components/TopBar";
+import impulse from "assets/impulse.wav";
+import { useSound } from "use-sound";
 
 const darkOptions: ThemeOptions = {
   palette: {
@@ -21,17 +23,28 @@ const darkOptions: ThemeOptions = {
 const darkTheme = createTheme(darkOptions);
 const lightTheme = createTheme({});
 
+// const play = () => {
+//   new Audio(boop).play();
+// };
+
 export const Layout = () => {
   const [isDarkTheme, setDarkTheme] = useState<boolean>(true);
+  const [play] = useSound(impulse, { volume: 0.5 });
+  const togleTheme = () => {
+    play();
+    setTimeout(() => setDarkTheme((prev) => !prev), 400);
+  };
+
   return (
     <>
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-        <TopBar changeTheme={() => setDarkTheme((prev) => !prev)} />
+        <TopBar changeTheme={togleTheme} isDarkTheme={isDarkTheme} />
         <Offset />
         <Container
           sx={(theme) => ({
             minHeight: "100vh",
             background: theme.palette.background.default,
+            transition: "background .4s .5s",
           })}
           maxWidth="xl"
         >

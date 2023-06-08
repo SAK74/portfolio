@@ -14,8 +14,20 @@ const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       {
-        path: "home",
         element: <MainPage />,
+        index: true,
+      },
+      {
+        path: "skils",
+        element: <div>Skils</div>,
+      },
+      {
+        path: "projects",
+        element: <div>Projects</div>,
+      },
+      {
+        path: "contact",
+        element: <div>Contact</div>,
       },
     ],
   },
