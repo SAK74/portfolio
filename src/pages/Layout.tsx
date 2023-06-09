@@ -1,33 +1,10 @@
 import { Outlet } from "react-router-dom";
-import {
-  Container,
-  ThemeOptions,
-  createTheme,
-  ThemeProvider,
-} from "@mui/material";
+import { Container, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { Offset, TopBar } from "components/TopBar";
 import impulse from "assets/impulse.wav";
 import { useSound } from "use-sound";
-
-const darkOptions: ThemeOptions = {
-  palette: {
-    mode: "dark",
-    background: {
-      default: "#202020",
-      paper: "#212121",
-    },
-  },
-};
-
-const darkTheme = createTheme(darkOptions);
-const lightTheme = createTheme({
-  palette: {
-    background: {
-      default: "#f2f2f2",
-    },
-  },
-});
+import { darkTheme, lightTheme } from "themes";
 
 // const play = () => {
 //   new Audio(boop).play();
