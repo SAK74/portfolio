@@ -29,6 +29,8 @@ export const Layout = () => {
             background: theme.palette.background.default,
             transition: "background .5s",
             py: 3,
+            // display: "flex",
+            // alignItems: "center",
           })}
           maxWidth="xl"
         >
