@@ -21,7 +21,13 @@ const darkOptions: ThemeOptions = {
 };
 
 const darkTheme = createTheme(darkOptions);
-const lightTheme = createTheme({});
+const lightTheme = createTheme({
+  palette: {
+    background: {
+      default: "#f2f2f2",
+    },
+  },
+});
 
 // const play = () => {
 //   new Audio(boop).play();
@@ -44,7 +50,8 @@ export const Layout = () => {
           sx={(theme) => ({
             minHeight: "100vh",
             background: theme.palette.background.default,
-            transition: "background .4s .5s",
+            transition: "background .5s",
+            py: 3,
           })}
           maxWidth="xl"
         >
