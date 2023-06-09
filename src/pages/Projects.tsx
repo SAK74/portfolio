@@ -1,7 +1,6 @@
-// import { Paper } from "@mui/material";
 import { ProjectCard } from "components/ProjectCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Keyboard } from "swiper";
 import { projects } from "projects";
 import { useSound } from "use-sound";
 import slideSound from "assets/slide.wav";
@@ -21,12 +20,13 @@ export const Projects = () => {
         onSlideChange={() => {
           play();
         }}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Keyboard]}
         navigation
         pagination={{ clickable: true }}
         // breakpoints={{ 900: { slidesPerView: 3 } }} // example
         grabCursor
         loop
+        keyboard
       >
         {projects.map((project) => (
           <SwiperSlide key={project.name}>
@@ -34,9 +34,6 @@ export const Projects = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* {projects.map((project) => (
-        <ProjectCard key={project.name} {...project} />
-      ))} */}
     </>
   );
 };
