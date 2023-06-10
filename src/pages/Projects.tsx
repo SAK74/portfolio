@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Keyboard } from "swiper";
 import { projects } from "projects";
 import { useSound } from "use-sound";
-import slideSound from "assets/slide.wav";
+import slideSound from "assets/sounds/slide.wav";
+import "./projects.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,8 +15,8 @@ export const Projects = () => {
   return (
     <>
       <Swiper
-        style={{ width: "50%" }}
-        slidesPerView={2}
+        style={{ width: "80%" }}
+        // slidesPerView={2}
         spaceBetween={20}
         onSlideChange={() => {
           play();
@@ -23,9 +24,9 @@ export const Projects = () => {
         modules={[Navigation, Pagination, Keyboard]}
         navigation
         pagination={{ clickable: true }}
-        // breakpoints={{ 900: { slidesPerView: 3 } }} // example
+        breakpoints={{ 600: { slidesPerView: 2 }, 900: { slidesPerView: 3 } }} // example
         grabCursor
-        loop
+        // loop
         keyboard
       >
         {projects.map((project) => (

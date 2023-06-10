@@ -7,7 +7,7 @@ import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import "./topBar.css";
 import { useSound } from "use-sound";
-import boop from "assets/switch-off.wav";
+import boop from "assets/sounds/switch-off.wav";
 
 export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
   changeTheme,

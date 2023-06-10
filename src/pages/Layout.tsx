@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Container, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { Offset, TopBar } from "components/TopBar";
-import impulse from "assets/impulse.wav";
+import impulse from "assets/sounds/impulse.wav";
 import { useSound } from "use-sound";
 import { darkTheme, lightTheme } from "themes";
 
