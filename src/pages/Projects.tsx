@@ -9,22 +9,25 @@ import "./projects.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useRootCtx } from "components/RootProvider";
 
 export const Projects = () => {
+  const { onSound } = useRootCtx();
   const [play] = useSound(slideSound, { volume: 0.5 });
   return (
     <>
       <Swiper
         style={{ width: "80%" }}
-        // slidesPerView={2}
         spaceBetween={20}
         onSlideChange={() => {
-          play();
+          if (onSound) {
+            play();
+          }
         }}
         modules={[Navigation, Pagination, Keyboard]}
         navigation
         pagination={{ clickable: true }}
-        breakpoints={{ 600: { slidesPerView: 2 }, 900: { slidesPerView: 3 } }} // example
+        breakpoints={{ 600: { slidesPerView: 2 }, 900: { slidesPerView: 3 } }}
         grabCursor
         // loop
         keyboard
