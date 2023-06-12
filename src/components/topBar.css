@@ -1,12 +1,10 @@
 .active {
-  /* color: red; */
   opacity: 1;
   font-size: 1.1rem;
   text-decoration: none;
 }
 
 a {
-  /* text-decoration: none; */
   color: inherit;
   opacity: 0.8;
 }
