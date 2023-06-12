@@ -5,6 +5,8 @@ import {
   IconButton,
   Grid,
   Stack,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 import {
   Nightlight,
@@ -12,13 +14,18 @@ import {
   VolumeUp,
   VolumeOff,
 } from "@mui/icons-material";
-import { FC, MouseEvent } from "react";
+import { FC, MouseEvent, MouseEventHandler, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./topBar.css";
 import { useSound } from "use-sound";
 import boop from "assets/sounds/switch-off.wav";
 import switchOn from "assets/sounds/switch_on.wav";
 import { useRootCtx } from "./RootProvider";
+import CountryFlag from "react-svg-country-flags";
+
+const Flag: FC<{ country: string }> = ({ country }) => (
+  <CountryFlag country={country === "en" ? "gb" : country} />
+);
 
 export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
   changeTheme,
@@ -27,6 +34,7 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
   const { onSound, setOnSound } = useRootCtx();
   const [playLink] = useSound(boop, { volume: 0.5 });
   const [playSound] = useSound(switchOn, { volume: 0.5 });
+
   const clickLink = ({ currentTarget }: MouseEvent<HTMLAnchorElement>) => {
     if (onSound && !currentTarget.classList.contains("active")) {
       playLink();
@@ -38,6 +46,20 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
     }
     setOnSound((prev) => !prev);
   };
+
+  const [anchor, setAnchor] = useState<HTMLElement | null>(null);
+  const langMenuClick: MouseEventHandler<HTMLButtonElement> = ({
+    currentTarget,
+  }) => {
+    setAnchor(currentTarget);
+  };
+
+  const [lang, setLang] = useState("pl");
+  const langClick = (lng: string) => {
+    setLang(lng);
+    setAnchor(null);
+  };
+  const languages = ["en", "pl"];
   return (
     <>
       <AppBar>
@@ -79,11 +101,27 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
                 <IconButton onClick={togleSound}>
                   {!onSound ? <VolumeOff /> : <VolumeUp />}
                 </IconButton>
+                <IconButton onClick={langMenuClick}>
+                  <Flag country={lang} />
+                </IconButton>
               </Stack>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
+      <Menu open={!!anchor} onClose={() => setAnchor(null)} anchorEl={anchor}>
+        {languages.map((lng) => {
+          if (lng === lang) {
+            return null;
+          } else {
+            return (
+              <MenuItem key={lng} onClick={() => langClick(lng)}>
+                <Flag country={lng} />
+              </MenuItem>
+            );
+          }
+        })}
+      </Menu>
     </>
   );
 };
