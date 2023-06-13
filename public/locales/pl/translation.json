@@ -1,0 +1,11 @@
+{
+  "topBar": {
+    "invite": "Witam",
+    "links": {
+      "about": "O mnie",
+      "skills": "Umiejętności",
+      "projects": "Projecty",
+      "contact": "Kontakt"
+    }
+  }
+}

@@ -18,6 +18,8 @@ import {
 } from "@mui/icons-material";
 import { Languages, ProjectType } from "projects";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
+
 import { ReactComponent as Angular } from "assets/skils/angular.svg";
 import { ReactComponent as Js } from "assets/skils/js.svg";
 import { ReactComponent as Ts } from "assets/skils/ts.svg";
@@ -42,6 +44,9 @@ export const ProjectCard: FC<ProjectType> = ({
   gh_link,
   deploy,
 }) => {
+  const {
+    i18n: { language },
+  } = useTranslation();
   return (
     <StyledCard sx={{ width: { lg: 300 } }} elevation={5}>
       <CardHeader
@@ -63,7 +68,7 @@ export const ProjectCard: FC<ProjectType> = ({
           >
             <TimeIcon />
             <span>
-              {dateCreated.toLocaleDateString("en-EN", {
+              {dateCreated.toLocaleDateString(language, {
                 month: "short",
                 year: "numeric",
               })}

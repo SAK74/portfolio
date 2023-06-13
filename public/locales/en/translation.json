@@ -1,0 +1,11 @@
+{
+  "topBar": {
+    "invite": "Welcome",
+    "links": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  }
+}

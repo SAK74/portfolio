@@ -5,6 +5,7 @@ import { useSound } from "use-sound";
 import boop from "assets/sounds/switch-off.wav";
 import { useRootCtx } from "./RootProvider";
 import { ControlComponent } from "./Control";
+import { useTranslation } from "react-i18next";
 import "./topBar.css";
 
 export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
@@ -13,6 +14,7 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
 }) => {
   const { onSound } = useRootCtx();
   const [playLink] = useSound(boop, { volume: 0.5 });
+  const { t } = useTranslation();
 
   const clickLink = ({ currentTarget }: MouseEvent<HTMLAnchorElement>) => {
     if (onSound && !currentTarget.classList.contains("active")) {
@@ -31,7 +33,7 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
             spacing={2}
           >
             <Grid item sx={{ letterSpacing: ".5rem", fontSize: "1.5rem" }}>
-              Welcome
+              {t("topBar.invite")}
             </Grid>
             <Grid
               component={"nav"}
@@ -41,16 +43,16 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
               container
             >
               <NavLink to="/" onClick={clickLink}>
-                About
+                {t("topBar.links.about")}
               </NavLink>
               <NavLink to="/skils" onClick={clickLink}>
-                Skils
+                {t("topBar.links.skills")}
               </NavLink>
               <NavLink to="/projects" onClick={clickLink}>
-                Projects
+                {t("topBar.links.projects")}
               </NavLink>
               <NavLink to="/contact" onClick={clickLink}>
-                Contact
+                {t("topBar.links.contact")}
               </NavLink>
             </Grid>
             <Grid item>
