@@ -9,6 +9,8 @@ import CountryFlag from "react-svg-country-flags";
 import { FC, useState, MouseEventHandler } from "react";
 import { useRootCtx } from "./RootProvider";
 import { useSound } from "use-sound";
+import { useTranslation } from "react-i18next";
+import { supportedLngs } from "i18n";
 
 import switchOn from "assets/sounds/switch_on.wav";
 
@@ -35,13 +37,12 @@ export const ControlComponent: FC<{
   }) => {
     setAnchor(currentTarget);
   };
-  const [lang, setLang] = useState("en");
   const langClick = (lng: string) => {
-    setLang(lng);
+    i18n.changeLanguage(lng);
     setAnchor(null);
   };
 
-  const languages = ["en", "pl"];
+  const { i18n } = useTranslation();
   return (
     <>
       <Stack direction="row">
@@ -52,12 +53,12 @@ export const ControlComponent: FC<{
           {!onSound ? <VolumeOff /> : <VolumeUp />}
         </IconButton>
         <IconButton onClick={langMenuClick}>
-          <Flag country={lang} />
+          <Flag country={i18n.language} />
         </IconButton>
       </Stack>
       <Menu open={!!anchor} onClose={() => setAnchor(null)} anchorEl={anchor}>
-        {languages.map((lng) => {
-          if (lng === lang) {
+        {supportedLngs.map((lng) => {
+          if (lng === i18n.language) {
             return null;
           } else {
             return (
