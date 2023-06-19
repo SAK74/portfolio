@@ -3,7 +3,7 @@ import { FC, MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
 import { useSound } from "use-sound";
 import boop from "assets/sounds/switch-off.wav";
-import { useRootCtx } from "./RootProvider";
+import { useRootCtx } from "../RootProvider";
 import { ControlComponent } from "./Control";
 import { useTranslation } from "react-i18next";
 import "./topBar.css";

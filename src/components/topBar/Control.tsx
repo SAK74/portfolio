@@ -7,7 +7,7 @@ import {
 } from "@mui/icons-material";
 import CountryFlag from "react-svg-country-flags";
 import { FC, useState, MouseEventHandler } from "react";
-import { useRootCtx } from "./RootProvider";
+import { useRootCtx } from "../RootProvider";
 import { useSound } from "use-sound";
 import { useTranslation } from "react-i18next";
 import { supportedLngs } from "i18n";

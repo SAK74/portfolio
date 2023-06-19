@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Container, ThemeProvider } from "@mui/material";
 import { useState } from "react";
-import { Offset, TopBar } from "components/TopBar";
+import { Offset, TopBar } from "components/topBar/TopBar";
 import click from "assets/sounds/cliiick.wav";
 import { useSound } from "use-sound";
 import { darkTheme, lightTheme } from "themes";
@@ -30,6 +30,7 @@ export const Layout = () => {
             sx={(theme) => ({
               minHeight: "100vh",
               background: theme.palette.background.default,
+              color: theme.palette.text.primary,
               transition: "background .5s",
               py: 3,
             })}
