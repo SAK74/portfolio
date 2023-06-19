@@ -12,7 +12,9 @@ import { useSound } from "use-sound";
 import { useTranslation } from "react-i18next";
 import { supportedLngs } from "i18n";
 
+import click from "assets/sounds/cliiick.wav";
 import switchOn from "assets/sounds/switch_on.wav";
+import tuck from "assets/sounds/switch-off.wav";
 
 const Flag: FC<{ country: string }> = ({ country }) => (
   <CountryFlag country={country === "en" ? "gb" : country} />
@@ -23,10 +25,14 @@ export const ControlComponent: FC<{
   isDarkTheme: boolean;
 }> = ({ changeTheme, isDarkTheme }) => {
   const { onSound, setOnSound } = useRootCtx();
-  const [playSound] = useSound(switchOn, { volume: 0.5 });
+
+  const [playSwitch] = useSound(switchOn, { volume: 0.5 });
+  const [playClick] = useSound(click, { volume: 0.5 });
+  const [playTuck] = useSound(tuck, { volume: 0.25 });
+
   const togleSound = () => {
     if (!onSound) {
-      playSound();
+      playSwitch();
     }
     setOnSound((prev) => !prev);
   };
@@ -35,9 +41,15 @@ export const ControlComponent: FC<{
   const langMenuClick: MouseEventHandler<HTMLButtonElement> = ({
     currentTarget,
   }) => {
+    if (onSound) {
+      playTuck();
+    }
     setAnchor(currentTarget);
   };
   const langClick = (lng: string) => {
+    if (onSound) {
+      playClick();
+    }
     i18n.changeLanguage(lng);
     setAnchor(null);
   };

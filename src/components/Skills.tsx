@@ -6,7 +6,7 @@ import { ReactComponent as ReactIcon } from "assets/skils/react.svg";
 import { ReactComponent as Mui } from "assets/skils/material-ui-1.svg";
 
 import { FC } from "react";
-import { SvgIcon, Rating, Box, Stack, Grid } from "@mui/material";
+import { SvgIcon, Rating, Stack, Grid } from "@mui/material";
 
 interface SkillType {
   name: string;

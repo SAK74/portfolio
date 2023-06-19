@@ -16,7 +16,9 @@ export const Layout = () => {
   const [onSound, setOnSound] = useState<boolean>(true);
   const [play] = useSound(click, { volume: 0.5 });
   const togleTheme = () => {
-    play();
+    if (onSound) {
+      play();
+    }
     setTimeout(() => setDarkTheme((prev) => !prev), 400);
   };
 
