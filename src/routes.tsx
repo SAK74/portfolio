@@ -1,5 +1,5 @@
 import { RouteObject } from "react-router-dom";
-import { Layout, MainPage, Skils, Projects, Contact } from "pages";
+import { Layout, MainPage, SkillsPage, Projects, Contact } from "pages";
 
 export const routes: RouteObject[] = [
   {
@@ -12,7 +12,7 @@ export const routes: RouteObject[] = [
       },
       {
         path: "skils",
-        element: <Skils />,
+        element: <SkillsPage />,
       },
       {
         path: "projects",

@@ -1,17 +1,18 @@
 import { Grid, Card, CardHeader, CardContent } from "@mui/material";
-import { Skills } from "components/Skills";
+import { Skills } from "components/skills/Skills";
+import { DESCRIPTION } from "./MainPage";
 
-export const Skils = () => {
+export const SkillsPage = () => {
   return (
     <>
       <Grid container sx={{ justifyContent: "space-around" }}>
-        <Grid item xs={7}>
+        <Grid item xs={6}>
           <Skills />
         </Grid>
-        <Grid item>
+        <Grid item xs={5}>
           <Card elevation={3}>
             <CardHeader title="Description" />
-            <CardContent></CardContent>
+            <CardContent>{DESCRIPTION}</CardContent>
           </Card>
         </Grid>
       </Grid>

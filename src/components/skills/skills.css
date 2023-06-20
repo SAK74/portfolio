@@ -1,0 +1,11 @@
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 1rem;
+  }
+  100% {
+    bottom: 0;
+  }
+}
