@@ -3,8 +3,7 @@ import race from "assets/screens/async_race_screen.png";
 import pixabay from "assets/screens/pixabay_screen.png";
 import youtube from "assets/screens/youtube_screen.png";
 import projectManage from "assets/screens/project-manageangular_screen.png";
-
-export type Languages = "angular" | "js" | "mui" | "ts" | "react";
+import { Languages } from "components/ProjectCard";
 
 export interface ProjectType {
   name: string;
@@ -44,7 +43,7 @@ export const projects: ProjectType[] = [
     name: "Project-manage",
     dateCreated: new Date(2023, 3),
     image: projectManage,
-    languages: ["angular"],
+    languages: ["angular", "angular_material"],
     deploy: "https://project-managment-angular.vercel.app/",
     gh_link: "https://github.com/SAK74/project-managment-angular",
   },

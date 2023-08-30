@@ -16,7 +16,7 @@ import {
   GitHub as GhIcon,
   Link as LinkIcon,
 } from "@mui/icons-material";
-import { Languages, ProjectType } from "data/projects";
+import { ProjectType } from "data/projects";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -25,6 +25,15 @@ import { ReactComponent as Js } from "assets/skils/js.svg";
 import { ReactComponent as Ts } from "assets/skils/ts.svg";
 import { ReactComponent as ReactIcon } from "assets/skils/react.svg";
 import { ReactComponent as Mui } from "assets/skils/material-ui-1.svg";
+import { ReactComponent as AngularMaterial } from "assets/skils/angular-material.svg";
+
+export type Languages =
+  | "angular"
+  | "js"
+  | "mui"
+  | "ts"
+  | "react"
+  | "angular_material";
 
 const matched: { [Prop in Languages]: FC } = {
   angular: Angular,
@@ -32,6 +41,7 @@ const matched: { [Prop in Languages]: FC } = {
   ts: Ts,
   react: ReactIcon,
   mui: Mui,
+  angular_material: AngularMaterial,
 };
 
 const StyledCard = styled(Card)(({ theme }) => ({}));
