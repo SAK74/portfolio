@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Rating, Stack, SvgIcon, Tooltip } from "@mui/material";
-import { SkillType } from "./skills_data";
+import { SkillType } from "../../data/skills_data";
 
 export const Skill: FC<SkillType & { n: number }> = ({
   icon,

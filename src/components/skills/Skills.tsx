@@ -6,7 +6,7 @@ import {
   stylingTools,
   testingTools,
   tools,
-} from "./skills_data";
+} from "../../data/skills_data";
 import { Skill } from "./Skill";
 
 export const Skills = () => {

@@ -16,7 +16,7 @@ import {
   GitHub as GhIcon,
   Link as LinkIcon,
 } from "@mui/icons-material";
-import { Languages, ProjectType } from "projects";
+import { Languages, ProjectType } from "data/projects";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 
