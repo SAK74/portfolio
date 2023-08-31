@@ -7,5 +7,9 @@
       "projects": "Projects",
       "contact": "Contact"
     }
+  },
+  "about": {
+    "title": "About Me...",
+    "description": "   I had started interested of programming still as a teenager. There were being Basic & Fortran yet  in those days :). Then was Pascal in the university... Next I didn't work unfortunatelly in my learned proffesion (automation and controls in technical systems), but coding remained all the time as my hobby, passion.  Then Java has been attached, and JavaScript later.\n   At some point (about 2 years ago) I have came to the conclusion that mine favorite activity could became way of life. So I took for hard work! I started with frontend, adding more technologies and libraries (React, Angular and other connected libraries), and then backend also (NodeJs, NestJs, relational db etc.). Full list is available in 'Skils' page.\n   Currently I am opened to job in team with similar interests to be able grow my expiriance and gain new knowlege."
   }
 }
