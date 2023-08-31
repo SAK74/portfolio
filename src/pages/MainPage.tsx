@@ -3,7 +3,7 @@ import photo from "assets/photo.jpg";
 import "./main-page.css";
 import { useTranslation } from "react-i18next";
 
-export const DESCRIPTION = `   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis purus libero, a pellentesque eros cursus semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit leo eu massa luctus, a iaculis magna placerat. Aliquam vitae purus tempor, mollis ex commodo, pharetra ipsum. Nulla facilisi. Suspendisse purus ex, pharetra dapibus libero at, pulvinar efficitur sem. Ut quis malesuada augue.`;
+// export const DESCRIPTION = `   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis purus libero, a pellentesque eros cursus semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit leo eu massa luctus, a iaculis magna placerat. Aliquam vitae purus tempor, mollis ex commodo, pharetra ipsum. Nulla facilisi. Suspendisse purus ex, pharetra dapibus libero at, pulvinar efficitur sem. Ut quis malesuada augue.`;
 
 export const MainPage = () => {
   const { t } = useTranslation();

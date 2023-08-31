@@ -11,5 +11,9 @@
   "about": {
     "title": "O mnie...",
     "description": "   Programowaniem zaczalem interesowac sie juz jako nastolatek. Traktowalem to raczej jako hobby, pasje, ktora pozwalala mi sie rozwijac i zdobywac nowe umiejetnosci. W koncu doszedlem do wniosku, ze to co lubie moze stac moim sposobem na zycie.\n   Aktualnie poszukuje swojej pierwszej pracy w branzy IT (glowny kierunek JS/ React/ Angular Development), gdzie bede mogl pracowac z ludzmi o podobnych zainteresowaniach oraz zwiekszac swoje doswiadczenie.\n   Dosc dobrze czuje sie w wymienionych technikach, jak rowniez daze do zdobycia nowej wiedzy i doskonalenia zdobytych umiejetnosci.\nOstatnio duzo czasu tez poswiecam na doskonalenie bak-endu (NodeJS, NestJS..)."
+  },
+  "skils": {
+    "title": "Główne techniki i narzędzia",
+    "description": "   Oto główne techniki i narzędzia zdobyte na kursach internetowych oraz za pomocą dokumentacji technicznej. Sprawdzone w praktycznym użyciu."
   }
 }
