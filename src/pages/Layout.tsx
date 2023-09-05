@@ -34,7 +34,7 @@ export const Layout = () => {
               background: theme.palette.background.default,
               color: theme.palette.text.primary,
               transition: "background .5s",
-              py: 3,
+              py: 5,
             })}
             maxWidth="xl"
           >

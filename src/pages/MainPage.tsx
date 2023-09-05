@@ -34,7 +34,7 @@ export const MainPage = () => {
       >
         <img src={photo} alt="_photo" />
       </Grid>
-      <Grid item xs={11} lg={6} sx={{ p: 2 }}>
+      <Grid item xs={11} lg={6}>
         <Card>
           <CardHeader title={t("about.title")} />
           <CardContent sx={{ whiteSpace: "break-spaces" }}>

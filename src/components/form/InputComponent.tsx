@@ -10,13 +10,14 @@ export const InputComponent = styled((props: CustomProps) => {
   const {
     fieldState: { invalid, error },
     field,
-  } = useController({ name, control, rules });
+  } = useController({ name, control, rules: { required: true } });
   return (
     <TextField
       {...{ ...field, ...otherProps }}
       error={invalid}
-      helperText={error?.message}
-      label={otherProps.label ?? name}
+      helperText={error && "This field is required!"}
+      label={otherProps.label ?? "Your " + name}
+      required
     />
   );
 })(({ theme }) => ({}));
