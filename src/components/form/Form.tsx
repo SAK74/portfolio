@@ -28,10 +28,10 @@ export const FormComponent = () => {
     },
   });
   const onValid: SubmitHandler<FormValues> = async (data) => {
-    console.log("data: ", data);
     await formspreeSubmit(data);
-    // await sleep(2000);
-    reset();
+    if (formSpreeState.succeeded) {
+      reset();
+    }
   };
 
   return (
@@ -45,7 +45,14 @@ export const FormComponent = () => {
       <InputComponent name="email" control={control} />
       <InputComponent name="subject" control={control} label="Subject" />
       <InputComponent name="message" minRows={3} multiline control={control} />
-      <ValidationError errors={formSpreeState.errors} />
+      <Box sx={{ color: "red" }}>
+        <ValidationError
+          errors={formSpreeState.errors}
+          field="email"
+          prefix="Email"
+        />
+        <ValidationError errors={formSpreeState.errors} />
+      </Box>
       <Button
         type="submit"
         variant={isSubmitting ? "text" : "contained"}
@@ -57,10 +64,3 @@ export const FormComponent = () => {
     </Box>
   );
 };
-
-// const sleep = (time: number) =>
-//   new Promise<void>((resolve) => {
-//     setTimeout(() => {
-//       resolve();
-//     }, time);
-//   });
