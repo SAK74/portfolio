@@ -54,7 +54,7 @@ export const FormComponent = () => {
         component="form"
         onSubmit={handleSubmit(onValid)}
         noValidate
-        sx={{ display: "flex", flexDirection: "column" }}
+        sx={{ display: "flex", flexDirection: "column", gap: 1 }}
       >
         <InputComponent name="name" control={control} />
         <InputComponent name="email" control={control} />

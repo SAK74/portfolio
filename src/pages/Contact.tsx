@@ -65,10 +65,19 @@ export const Contact = () => {
               </ListItem>
             </List>
             <Stack direction={"row"} spacing={8} sx={{ alignSelf: "center" }}>
-              <Link href="https://www.linkedin.com/in/serhiy-kusyy/">
+              <Link
+                href="https://www.linkedin.com/in/serhiy-kusyy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SvgIcon component={LinkedinIcon} fontSize="large" />
               </Link>
-              <Link href="https://github.com/SAK74" color="inherit">
+              <Link
+                href="https://github.com/SAK74"
+                color="inherit"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GitHub fontSize="large" />
               </Link>
             </Stack>
