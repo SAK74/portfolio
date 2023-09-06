@@ -6,10 +6,7 @@ import click from "assets/sounds/cliiick.wav";
 import { useSound } from "use-sound";
 import { darkTheme, lightTheme } from "themes";
 import { RootProvider } from "components/RootProvider";
-
-// const play = () => {
-//   new Audio(boop).play();
-// };
+import { Footer } from "components/Footer";
 
 export const Layout = () => {
   const [isDarkTheme, setDarkTheme] = useState<boolean>(true);
@@ -41,6 +38,7 @@ export const Layout = () => {
             <Outlet />
           </Container>
         </RootProvider>
+        <Footer />
       </ThemeProvider>
     </>
   );
