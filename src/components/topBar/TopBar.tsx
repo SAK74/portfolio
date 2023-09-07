@@ -1,5 +1,15 @@
-import { AppBar, Toolbar, styled, Grid } from "@mui/material";
-import { FC, MouseEvent } from "react";
+import {
+  AppBar,
+  Toolbar,
+  styled,
+  Grid,
+  useMediaQuery,
+  Theme,
+  IconButton,
+  Menu,
+  MenuItem,
+} from "@mui/material";
+import { FC, MouseEvent, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSound } from "use-sound";
 import boop from "assets/sounds/switch-off.wav";
@@ -7,6 +17,9 @@ import { useRootCtx } from "../RootProvider";
 import { ControlComponent } from "./Control";
 import { useTranslation } from "react-i18next";
 import "./topBar.css";
+import { Menu as MenuIcon } from "@mui/icons-material";
+
+const naviLinks = ["about", "skils", "projects", "contact"] as const;
 
 export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
   changeTheme,
@@ -21,6 +34,18 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
       playLink();
     }
   };
+
+  const isSmall: boolean = useMediaQuery<Theme>((theme) =>
+    theme.breakpoints.down("md")
+  );
+
+  const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
+
+  const renderedLinks = naviLinks.map((link) => (
+    <NavLink key={link} to={link === "about" ? "/" : link} onClick={clickLink}>
+      {t(`topBar.links.${link}`)}
+    </NavLink>
+  ));
 
   return (
     <>
@@ -42,18 +67,17 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
               sx={{ justifyContent: "flex-end", gap: "1rem", pr: 1 }}
               container
             >
-              <NavLink to="/" onClick={clickLink}>
-                {t("topBar.links.about")}
-              </NavLink>
-              <NavLink to="/skils" onClick={clickLink}>
-                {t("topBar.links.skills")}
-              </NavLink>
-              <NavLink to="/projects" onClick={clickLink}>
-                {t("topBar.links.projects")}
-              </NavLink>
-              <NavLink to="/contact" onClick={clickLink}>
-                {t("topBar.links.contact")}
-              </NavLink>
+              {!isSmall ? (
+                renderedLinks
+              ) : (
+                <IconButton
+                  onClick={({ currentTarget }) => {
+                    setMenuAnchor(currentTarget);
+                  }}
+                >
+                  <MenuIcon />
+                </IconButton>
+              )}
             </Grid>
             <Grid item>
               <ControlComponent {...{ changeTheme, isDarkTheme }} />
@@ -61,6 +85,17 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
           </Grid>
         </Toolbar>
       </AppBar>
+      <Menu
+        open={Boolean(menuAnchor)}
+        anchorEl={menuAnchor}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        transformOrigin={{ vertical: "top", horizontal: "center" }}
+        onClose={() => setMenuAnchor(null)}
+      >
+        {renderedLinks.map((link) => (
+          <MenuItem key={link.key}>{link}</MenuItem>
+        ))}
+      </Menu>
     </>
   );
 };
