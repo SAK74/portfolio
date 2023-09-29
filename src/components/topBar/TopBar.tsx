@@ -18,6 +18,7 @@ import { ControlComponent } from "./Control";
 import { useTranslation } from "react-i18next";
 import "./topBar.css";
 import { Menu as MenuIcon } from "@mui/icons-material";
+import { GetCV } from "./GetCV";
 
 const naviLinks = ["about", "skils", "projects", "contact"] as const;
 
@@ -46,6 +47,7 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
       {t(`topBar.links.${link}`)}
     </NavLink>
   ));
+  renderedLinks.push(<GetCV key="resume" />);
 
   return (
     <>
@@ -64,7 +66,12 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
               component={"nav"}
               item
               xs={10}
-              sx={{ justifyContent: "flex-end", gap: "1rem", pr: 1 }}
+              sx={{
+                justifyContent: "flex-end",
+                alignItems: "baseline",
+                gap: "1rem",
+                pr: 1,
+              }}
               container
             >
               {!isSmall ? (

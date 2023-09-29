@@ -16,6 +16,15 @@ const lightOptions: ThemeOptions = {
       default: "#f2f2f2",
     },
   },
+  components: {
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: "inherit",
+        },
+      },
+    },
+  },
 };
 
 export const darkTheme = createTheme(darkOptions);
