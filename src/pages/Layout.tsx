@@ -8,8 +8,10 @@ import { darkTheme, lightTheme } from "themes";
 import { RootProvider } from "components/RootProvider";
 import { Footer } from "components/Footer";
 
+const sysAgent = window.matchMedia("(prefers-color-scheme:dark)");
+
 export const Layout = () => {
-  const [isDarkTheme, setDarkTheme] = useState<boolean>(true);
+  const [isDarkTheme, setDarkTheme] = useState<boolean>(sysAgent.matches);
   const [onSound, setOnSound] = useState<boolean>(true);
   const [play] = useSound(click, { volume: 0.5 });
   const togleTheme = () => {
