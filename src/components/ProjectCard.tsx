@@ -26,6 +26,9 @@ import { ReactComponent as Ts } from "assets/skils/ts.svg";
 import { ReactComponent as ReactIcon } from "assets/skils/react.svg";
 import { ReactComponent as Mui } from "assets/skils/material-ui-1.svg";
 import { ReactComponent as AngularMaterial } from "assets/skils/angular-material.svg";
+import { ReactComponent as NestJS } from "assets/skils/NestJS.svg";
+import { ReactComponent as Prisma } from "assets/skils/prisma.svg";
+import { ReactComponent as Docker } from "assets/skils/docker.svg";
 
 export type Languages =
   | "angular"
@@ -33,7 +36,10 @@ export type Languages =
   | "mui"
   | "ts"
   | "react"
-  | "angular_material";
+  | "angular_material"
+  | "nestjs"
+  | "prisma"
+  | "docker";
 
 const matched: { [Prop in Languages]: FC } = {
   angular: Angular,
@@ -42,6 +48,9 @@ const matched: { [Prop in Languages]: FC } = {
   react: ReactIcon,
   mui: Mui,
   angular_material: AngularMaterial,
+  nestjs: NestJS,
+  prisma: Prisma,
+  docker: Docker,
 };
 
 const StyledCard = styled(Card)(({ theme }) => ({}));
@@ -95,7 +104,8 @@ export const ProjectCard: FC<ProjectType> = ({
           />
         </Tooltip>
       </CardActionArea>
-      <CardContent>content...</CardContent>
+      {/*todo*/}
+      <CardContent>description...</CardContent>
       <CardActions>
         <Tooltip title="repo">
           <Link href={gh_link} target="_blank" children={<GhIcon />} />

@@ -4,6 +4,7 @@ import pixabay from "assets/screens/pixabay_screen.png";
 import youtube from "assets/screens/youtube_screen.png";
 import projectManage from "assets/screens/project-manageangular_screen.png";
 import { Languages } from "components/ProjectCard";
+import _node from "assets/skils/Node.js_logo.svg";
 
 export interface ProjectType {
   name: string;
@@ -53,5 +54,12 @@ export const projects: ProjectType[] = [
     image: youtube,
     languages: ["angular"],
     gh_link: "https://github.com/SAK74/youtube-client-angular",
+  },
+  {
+    name: "Nodejs-library-service",
+    dateCreated: new Date(2023, 7),
+    image: _node,
+    languages: ["nestjs", "prisma", "docker"],
+    gh_link: "https://github.com/SAK74/nodejs2023Q2-service",
   },
 ];

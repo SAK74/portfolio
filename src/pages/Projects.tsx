@@ -29,7 +29,7 @@ export const Projects = () => {
         pagination={{ clickable: true }}
         breakpoints={{ 600: { slidesPerView: 2 }, 900: { slidesPerView: 3 } }}
         grabCursor
-        // loop
+        loop
         keyboard
       >
         {projects.map((project) => (
