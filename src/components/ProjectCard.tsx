@@ -20,15 +20,7 @@ import { ProjectType } from "data/projects";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 
-import { ReactComponent as Angular } from "assets/skils/angular.svg";
-import { ReactComponent as Js } from "assets/skils/js.svg";
-import { ReactComponent as Ts } from "assets/skils/ts.svg";
-import { ReactComponent as ReactIcon } from "assets/skils/react.svg";
-import { ReactComponent as Mui } from "assets/skils/material-ui-1.svg";
-import { ReactComponent as AngularMaterial } from "assets/skils/angular-material.svg";
-import { ReactComponent as NestJS } from "assets/skils/NestJS.svg";
-import { ReactComponent as Prisma } from "assets/skils/prisma.svg";
-import { ReactComponent as Docker } from "assets/skils/docker.svg";
+import * as Icon from "icons";
 
 export type Languages =
   | "angular"
@@ -42,15 +34,15 @@ export type Languages =
   | "docker";
 
 const matched: { [Prop in Languages]: FC } = {
-  angular: Angular,
-  js: Js,
-  ts: Ts,
-  react: ReactIcon,
-  mui: Mui,
-  angular_material: AngularMaterial,
-  nestjs: NestJS,
-  prisma: Prisma,
-  docker: Docker,
+  angular: Icon.Angular,
+  js: Icon.Js,
+  ts: Icon.Ts,
+  react: Icon.ReactIcon,
+  mui: Icon.Mui,
+  angular_material: Icon.AngularMaterial,
+  nestjs: Icon.NestJs,
+  prisma: Icon.Prisma,
+  docker: Icon.Docker,
 };
 
 const StyledCard = styled(Card)(({ theme }) => ({}));

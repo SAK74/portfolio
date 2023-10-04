@@ -1,34 +1,4 @@
-import { ReactComponent as Angular } from "assets/skils/angular.svg";
-import { ReactComponent as Js } from "assets/skils/js.svg";
-import { ReactComponent as Ts } from "assets/skils/ts.svg";
-import { ReactComponent as ReactIcon } from "assets/skils/react.svg";
-import { ReactComponent as Mui } from "assets/skils/material-ui-1.svg";
-import { ReactComponent as HTML } from "assets/skils/html5.svg";
-import { ReactComponent as CSS } from "assets/skils/css3.svg";
-import { ReactComponent as NodeIcon } from "assets/skils/Node.js_logo.svg";
-import { ReactComponent as Redux } from "assets/skils/redux.svg";
-import { ReactComponent as RestIcon } from "assets/skils/rest_api.svg";
-import { ReactComponent as StyledComps } from "assets/skils/styled-components-1.svg";
-import { ReactComponent as Tailwind } from "assets/skils/tailwind.svg";
-import { ReactComponent as Sass } from "assets/skils/sass.svg";
-import { ReactComponent as GraphQl } from "assets/skils/GraphQL_Logo.svg";
-import { ReactComponent as GitIcon } from "assets/skils/git.svg";
-import { ReactComponent as ExpressIcon } from "assets/skils/express.svg";
-import { ReactComponent as NextIcon } from "assets/skils/next.svg";
-import { ReactComponent as WebpackIcon } from "assets/skils/webpack.svg";
-import { ReactComponent as VSC } from "assets/skils/Visual_Studio_Code_1.35_icon.svg";
-import { ReactComponent as Jest } from "assets/skils/jest.svg";
-import { ReactComponent as ReactTestingLibraryIcon } from "assets/skils/testing-library.svg";
-import { ReactComponent as Figma } from "assets/skils/figma.svg";
-import { ReactComponent as Photoshop } from "assets/skils/photoshop.svg";
-import { ReactComponent as AngularMaterial } from "assets/skils/angular-material.svg";
-import { ReactComponent as Cypress } from "assets/skils/cypress.svg";
-import { ReactComponent as Firebase } from "assets/skils/firebase.svg";
-import { ReactComponent as NestJs } from "assets/skils/NestJS.svg";
-import { ReactComponent as Prisma } from "assets/skils/prisma.svg";
-import { ReactComponent as Rxjs } from "assets/skils/rxjs.svg";
-import { ReactComponent as Vite } from "assets/skils/vite.svg";
-import { ReactComponent as Docker } from "assets/skils/docker.svg";
+import * as Icon from "icons";
 
 import { GitHub as GhIcon } from "@mui/icons-material";
 import { FC } from "react";
@@ -40,62 +10,62 @@ export interface SkillType {
 }
 
 export const frontendSkills: SkillType[] = [
-  { name: "HTML 5", icon: HTML, level: 4 },
-  { name: "CSS 3", icon: CSS, level: 4 },
+  { name: "HTML 5", icon: Icon.HTML, level: 4 },
+  { name: "CSS 3", icon: Icon.CSS, level: 4 },
 
   {
     name: "JavaScript",
-    icon: Js,
+    icon: Icon.Js,
     level: 4,
   },
-  { name: "TypeScript", icon: Ts, level: 4 },
+  { name: "TypeScript", icon: Icon.Ts, level: 4 },
 
   {
     name: "React.js",
     level: 4,
-    icon: ReactIcon,
+    icon: Icon.ReactIcon,
   },
 
   {
     name: "Angular",
     level: 3,
-    icon: Angular,
+    icon: Icon.Angular,
   },
   {
     name: "Redux",
-    icon: Redux,
+    icon: Icon.Redux,
   },
   {
     name: "Next.js",
-    icon: NextIcon,
+    icon: Icon.NextIcon,
   },
   {
     name: "RxJs",
-    icon: Rxjs,
+    icon: Icon.Rxjs,
   },
 ];
 
 export const stylingTools: SkillType[] = [
   {
     name: "Material UI",
-    icon: Mui,
+    icon: Icon.Mui,
   },
   {
     name: "Angular Material UI",
-    icon: AngularMaterial,
+    icon: Icon.AngularMaterial,
   },
 
   {
     name: "Sass",
-    icon: Sass,
+    icon: Icon.Sass,
   },
   {
     name: "Styled Components",
-    icon: StyledComps,
+    icon: Icon.StyledComps,
   },
   {
     name: "Tailwind",
-    icon: Tailwind,
+    icon: Icon.Tailwind,
   },
 ];
 
@@ -103,65 +73,65 @@ export const backendSkills: SkillType[] = [
   {
     name: "Node.js",
     level: 3,
-    icon: NodeIcon,
+    icon: Icon.NodeIcon,
   },
   {
     name: "Rest API",
-    icon: RestIcon,
+    icon: Icon.RestIcon,
   },
   {
     name: "GraphQL",
-    icon: GraphQl,
+    icon: Icon.GraphQl,
   },
   {
     name: "Express.js",
-    icon: ExpressIcon,
+    icon: Icon.ExpressIcon,
   },
   {
     name: "NestJs",
-    icon: NestJs,
+    icon: Icon.NestJs,
   },
   {
     name: "Prisma",
-    icon: Prisma,
+    icon: Icon.Prisma,
   },
 ];
 
 export const tools: SkillType[] = [
   {
     name: "Webpack",
-    icon: WebpackIcon,
+    icon: Icon.WebpackIcon,
   },
   {
     name: "Vite",
-    icon: Vite,
+    icon: Icon.Vite,
   },
   {
     name: "Docker",
-    icon: Docker,
+    icon: Icon.Docker,
   },
   {
     name: "Jest",
-    icon: Jest,
+    icon: Icon.Jest,
   },
   {
     name: "React-testing-library",
-    icon: ReactTestingLibraryIcon,
+    icon: Icon.ReactTestingLibraryIcon,
   },
   {
     name: "Cypress",
-    icon: Cypress,
+    icon: Icon.Cypress,
   },
   {
     name: "Firebase",
-    icon: Firebase,
+    icon: Icon.Firebase,
   },
 ];
 
 export const envirTools: SkillType[] = [
   {
     name: "Git",
-    icon: GitIcon,
+    icon: Icon.GitIcon,
   },
 
   {
@@ -170,14 +140,14 @@ export const envirTools: SkillType[] = [
   },
   {
     name: "Visual Studio Code",
-    icon: VSC,
+    icon: Icon.VSC,
   },
   {
     name: "Figma",
-    icon: Figma,
+    icon: Icon.Figma,
   },
   {
     name: "Photoshop",
-    icon: Photoshop,
+    icon: Icon.Photoshop,
   },
 ];
