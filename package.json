@@ -9,6 +9,7 @@
     "@formspree/react": "^2.5.1",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.4",
+    "@vercel/analytics": "^1.2.0",
     "i18next": "^22.5.1",
     "i18next-browser-languagedetector": "^7.0.2",
     "i18next-http-backend": "^2.2.1",
