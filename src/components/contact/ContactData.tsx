@@ -1,5 +1,4 @@
 import { LocationOn, Email, GitHub } from "@mui/icons-material";
-import { ReactComponent as LinkedinIcon } from "assets/skils/linkedin.svg";
 
 import {
   Stack,
@@ -13,6 +12,7 @@ import {
   SvgIcon,
 } from "@mui/material";
 import personals from "data/personals";
+import { LinkedinIcon } from "icons";
 
 const EmailComponent = styled(Typography)({
   cursor: "pointer",
