@@ -13,7 +13,7 @@ import { useRootCtx } from "components/RootProvider";
 
 export const Projects = () => {
   const { onSound } = useRootCtx();
-  const [play] = useSound(slideSound, { volume: 0.5 });
+  const [play] = useSound(slideSound, { volume: 0.1 });
   return (
     <>
       <Swiper

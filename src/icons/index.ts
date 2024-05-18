@@ -30,3 +30,4 @@ export { default as Rxjs } from "assets/skils/rxjs.svg?react";
 export { default as Vite } from "assets/skils/vite.svg?react";
 export { default as Docker } from "assets/skils/docker.svg?react";
 export { default as LinkedinIcon } from "assets/skils/linkedin.svg?react";
+export { default as Aws } from "assets/skils/aws.svg?react";
