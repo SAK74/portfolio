@@ -31,7 +31,9 @@ export type Languages =
   | "angular_material"
   | "nestjs"
   | "prisma"
-  | "docker";
+  | "docker"
+  | "aws"
+  | "next";
 
 const matched: { [Prop in Languages]: FC } = {
   angular: Icon.Angular,
@@ -43,6 +45,8 @@ const matched: { [Prop in Languages]: FC } = {
   nestjs: Icon.NestJs,
   prisma: Icon.Prisma,
   docker: Icon.Docker,
+  aws: Icon.Aws,
+  next: Icon.NextIcon,
 };
 
 const StyledCard = styled(Card)(({ theme }) => ({}));

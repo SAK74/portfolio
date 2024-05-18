@@ -51,6 +51,10 @@ export const stylingTools: SkillType[] = [
     icon: Icon.Mui,
   },
   {
+    name: "Tailwind",
+    icon: Icon.Tailwind,
+  },
+  {
     name: "Angular Material UI",
     icon: Icon.AngularMaterial,
   },
@@ -62,10 +66,6 @@ export const stylingTools: SkillType[] = [
   {
     name: "Styled Components",
     icon: Icon.StyledComps,
-  },
-  {
-    name: "Tailwind",
-    icon: Icon.Tailwind,
   },
 ];
 
