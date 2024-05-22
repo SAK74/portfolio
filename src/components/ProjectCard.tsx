@@ -10,6 +10,7 @@ import {
   styled,
   SvgIcon,
   Tooltip,
+  Typography,
 } from "@mui/material";
 import {
   AccessTime as TimeIcon,
@@ -58,6 +59,7 @@ export const ProjectCard: FC<ProjectType> = ({
   dateCreated,
   gh_link,
   deploy,
+  description,
 }) => {
   const {
     i18n: { language },
@@ -101,7 +103,15 @@ export const ProjectCard: FC<ProjectType> = ({
         </Tooltip>
       </CardActionArea>
       {/*todo*/}
-      <CardContent>description...</CardContent>
+      <CardContent>
+        <Typography
+          variant="body2"
+          component={"div"}
+          sx={{ fontStyle: "italic" }}
+        >
+          {description}
+        </Typography>
+      </CardContent>
       <CardActions>
         <Tooltip title="repo">
           <Link href={gh_link} target="_blank" children={<GhIcon />} />
