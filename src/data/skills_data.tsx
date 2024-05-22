@@ -28,7 +28,7 @@ export const frontendSkills: SkillType[] = [
 
   {
     name: "Angular",
-    level: 3,
+    level: 3.5,
     icon: Icon.Angular,
   },
   {
@@ -72,7 +72,7 @@ export const stylingTools: SkillType[] = [
 export const backendSkills: SkillType[] = [
   {
     name: "Node.js",
-    level: 3,
+    level: 3.0,
     icon: Icon.NodeIcon,
   },
   {
@@ -94,6 +94,10 @@ export const backendSkills: SkillType[] = [
   {
     name: "Prisma",
     icon: Icon.Prisma,
+  },
+  {
+    name: "AWS Cloud",
+    icon: Icon.Aws,
   },
 ];
 
