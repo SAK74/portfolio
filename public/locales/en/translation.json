@@ -15,5 +15,8 @@
   "skils": {
     "title": "Main skils & tools",
     "description": "   Here are main techniques & tools, gained on the courses and web-documentations and tested practically."
+  },
+  "contact": {
+    "title": "Write to me"
   }
 }
