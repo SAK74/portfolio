@@ -17,6 +17,7 @@ export const Footer = () => (
       alignItems: "center",
       gap: 1,
       boxShadow: (theme) => theme.shadows[20],
+      height: "2.5rem",
     }}
   >
     &#169; SAK74

@@ -30,17 +30,18 @@ export const TopBar: FC<{ changeTheme: () => void; isDarkTheme: boolean }> = ({
   const [playLink] = useSound(boop, { volume: 0.5 });
   const { t } = useTranslation();
 
+  const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
+
   const clickLink = ({ currentTarget }: MouseEvent<HTMLAnchorElement>) => {
     if (onSound && !currentTarget.classList.contains("active")) {
       playLink();
     }
+    setMenuAnchor(null);
   };
 
   const isSmall: boolean = useMediaQuery<Theme>((theme) =>
     theme.breakpoints.down("md")
   );
-
-  const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
 
   const renderedLinks = naviLinks.map((link) => (
     <NavLink key={link} to={link === "about" ? "/" : link} onClick={clickLink}>
