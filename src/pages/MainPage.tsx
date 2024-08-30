@@ -1,9 +1,15 @@
-import { Card, CardContent, CardHeader, Grid, Paper } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Grid,
+  Paper,
+  Stack,
+} from "@mui/material";
 import photo from "assets/photo.jpg";
 import "./main-page.css";
 import { useTranslation } from "react-i18next";
-
-// export const DESCRIPTION = `   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis purus libero, a pellentesque eros cursus semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit leo eu massa luctus, a iaculis magna placerat. Aliquam vitae purus tempor, mollis ex commodo, pharetra ipsum. Nulla facilisi. Suspendisse purus ex, pharetra dapibus libero at, pulvinar efficitur sem. Ut quis malesuada augue.`;
+import { MediaBar } from "components/MediaBar";
 
 export const MainPage = () => {
   const { t } = useTranslation();
@@ -17,23 +23,28 @@ export const MainPage = () => {
         rowGap: 2,
       }}
     >
-      <Grid
-        item
-        component={Paper}
-        elevation={3}
-        xs={2}
-        lg={3}
-        sx={{
-          "&>img": {
-            width: "100%",
-            borderRadius: "inherit",
-          },
-          p: 1,
-          animation: "zoom 1s forwards",
-        }}
-      >
-        <img src={photo} alt="_photo" />
+      <Grid item xs={2} lg={2}>
+        <Stack
+          sx={{
+            "& img": {
+              width: "100%",
+              borderRadius: "inherit",
+            },
+          }}
+          spacing={6}
+        >
+          <Paper
+            sx={{
+              p: 0.5,
+              transform: "rotateZ(-4deg)",
+            }}
+          >
+            <img src={photo} alt="_photo" />
+          </Paper>
+          <MediaBar />
+        </Stack>
       </Grid>
+
       <Grid item xs={11} lg={6}>
         <Card>
           <CardHeader title={t("about.title")} />

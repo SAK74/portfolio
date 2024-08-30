@@ -29,7 +29,7 @@ export const Layout = () => {
           <Offset />
           <Container
             sx={(theme) => ({
-              minHeight: "100vh",
+              minHeight: "calc(100vh - 6.5rem)",
               background: theme.palette.background.default,
               color: theme.palette.text.primary,
               transition: "background .5s",
