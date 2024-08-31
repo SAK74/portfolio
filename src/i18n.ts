@@ -17,7 +17,9 @@ i18n
       escapeValue: false,
     },
     detection: { order: ["navigator"] },
-    backend: {},
+    backend: {
+      loadPath: "/portfolio/locales/{{lng}}/{{ns}}.json",
+    },
   });
 
 export default i18n;
