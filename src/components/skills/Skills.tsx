@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import "./skills.css";
 import {
   backendSkills,
@@ -8,13 +8,20 @@ import {
   tools,
 } from "../../data/skills_data";
 import { Skill } from "./Skill";
+import type { FC, PropsWithChildren } from "react";
+
+const Title: FC<PropsWithChildren> = ({ children }) => {
+  return (
+    <Grid item xs={12} component={Typography} variant="h6">
+      <Box sx={{ mt: 1 }}>{children}:</Box>
+    </Grid>
+  );
+};
 
 export const Skills = () => {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} component={Typography} variant="subtitle1">
-        Frontend:
-      </Grid>
+      <Title>Frontend</Title>
 
       {frontendSkills.map((skill, i) => (
         <Grid item key={skill.name} sx={{}}>
@@ -32,9 +39,7 @@ export const Skills = () => {
           />
         </Grid>
       ))}
-      <Grid item xs={12} component={Typography} variant="subtitle1">
-        Backend:
-      </Grid>
+      <Title>Backend</Title>
       {backendSkills.map((skill, i) => (
         <Grid item key={skill.name} sx={{}}>
           <Skill
@@ -43,9 +48,7 @@ export const Skills = () => {
           />
         </Grid>
       ))}
-      <Grid item xs={12} component={Typography} variant="subtitle1">
-        Tools:
-      </Grid>
+      <Title>Tools</Title>
       {tools.map((tool, i) => (
         <Grid item key={tool.name}>
           <Skill
