@@ -2,15 +2,7 @@ import { FC, ReactNode, useEffect, useState } from "react";
 import { convertToReactNode } from "./convertToReactNode";
 import { CircularProgress, SvgIcon, SvgIconTypeMap } from "@mui/material";
 import QuestIcon from "@mui/icons-material/QuestionMark";
-
-const fetchSVG = (url: string) =>
-  fetch(url).then((resp) => {
-    if (resp.ok) return resp.text();
-    else {
-      console.log(resp);
-      throw Error("wrong response...");
-    }
-  });
+import { fetchSVG } from "./fetchProxy";
 
 export const IconFromUrl: FC<{ url: string } & SvgIconTypeMap["props"]> = ({
   url,

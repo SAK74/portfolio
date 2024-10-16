@@ -49,7 +49,7 @@ export const frontendSkills: SkillType[] = [
   },
   {
     name: "Astro",
-    icon: "https://profilinator.rishav.dev/skills-assets/astro.svg",
+    icon: "https://cdn.worldvectorlogo.com/logos/astrojs.svg",
   },
 ];
 
