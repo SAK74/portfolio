@@ -6,7 +6,7 @@ import { FC } from "react";
 export interface SkillType {
   name: string;
   level?: number;
-  icon: FC;
+  icon: FC | string;
 }
 
 export const frontendSkills: SkillType[] = [
@@ -42,6 +42,14 @@ export const frontendSkills: SkillType[] = [
   {
     name: "RxJs",
     icon: Icon.Rxjs,
+  },
+  {
+    name: "Web Components",
+    icon: "https://sak74.github.io/icons/web-components.svg",
+  },
+  {
+    name: "Astro",
+    icon: "https://cdn.worldvectorlogo.com/logos/astrojs.svg",
   },
 ];
 
@@ -129,6 +137,10 @@ export const tools: SkillType[] = [
   {
     name: "Firebase",
     icon: Icon.Firebase,
+  },
+  {
+    name: "Storybook",
+    icon: "https://sak74.github.io/icons/storybook.svg",
   },
 ];
 
