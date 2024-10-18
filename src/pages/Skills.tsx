@@ -12,7 +12,7 @@ import {
 import { Certyficates } from "components/Certyficates";
 import { useRootCtx } from "components/RootProvider";
 import { Skills } from "components/skills/Skills";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import type { FC, PropsWithChildren } from "react";
 import { useTranslation } from "react-i18next";
 import useSound from "use-sound";
@@ -25,7 +25,7 @@ const Panel: FC<PropsWithChildren<{ label: AllTabs; value: AllTabs }>> = ({
   label,
   value,
 }) => {
-  return value === label && <Box sx={{ mt: 1.5 }}>{children}</Box>;
+  return value === label && <Box sx={{ mt: 2 }}>{children}</Box>;
 };
 
 export const SkillsPage = () => {
