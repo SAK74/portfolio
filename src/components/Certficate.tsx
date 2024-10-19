@@ -73,7 +73,7 @@ export const Certyficate: FC<CertyficateType> = ({
         <Tooltip title={t("certyficates.tooltip")}>
           <IconButton edge="end">
             <Link href={pdfLink} target="_blank">
-              <Visibility />
+              <Visibility color="action" />
             </Link>
           </IconButton>
         </Tooltip>
