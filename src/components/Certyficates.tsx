@@ -6,9 +6,11 @@ import { Certyficate } from "./Certficate";
 export const Certyficates: FC = () => {
   return (
     <List>
-      {certyficates.map((certyficate) => (
-        <Certyficate key={certyficate.title} {...certyficate} />
-      ))}
+      {certyficates
+        .sort((a, b) => b.issue.getTime() - a.issue.getTime())
+        .map((certyficate) => (
+          <Certyficate key={certyficate.title} {...certyficate} />
+        ))}
     </List>
   );
 };

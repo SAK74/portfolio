@@ -52,16 +52,17 @@ export const Certyficate: FC<CertyficateType> = ({
           <>
             {`issued ${issue.toLocaleDateString(undefined, {
               year: "numeric",
-              month: "long",
+              month: "short",
             })}`}
-            <Box sx={{ m: 0.5 }}>
+            <Box>
               {skills?.map((skill) => (
                 <Chip
                   key={skill}
                   label={skill}
                   variant="outlined"
                   size="small"
-                  color="primary"
+                  color="success"
+                  sx={{ m: 0.5 }}
                 />
               ))}
             </Box>
