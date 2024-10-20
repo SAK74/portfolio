@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Rating, Stack, SvgIcon, Tooltip } from "@mui/material";
-import { SkillType } from "../../data/skills_data";
+import type { FC } from "react";
+import { Box, Rating, Stack, SvgIcon, Tooltip } from "@mui/material";
+import type { SkillType } from "../../data/skills_data";
 import { IconFromUrl } from "utils/IconFromUrl";
 
 export const Skill: FC<SkillType & { n: number }> = ({
@@ -10,7 +10,7 @@ export const Skill: FC<SkillType & { n: number }> = ({
   name,
 }) => {
   return (
-    <Tooltip title={name}>
+    <Tooltip title={name} sx={{}}>
       <Stack
         sx={{
           alignItems: "center",
@@ -18,11 +18,21 @@ export const Skill: FC<SkillType & { n: number }> = ({
           animation: `jump .5s ${(n + 1) * 0.1}s`,
         }}
       >
-        {typeof icon === "string" ? (
-          <IconFromUrl url={icon} fontSize="large" />
-        ) : (
-          <SvgIcon component={icon} inheritViewBox fontSize="large" />
-        )}
+        <Box
+          sx={{
+            position: "relative",
+            "&:hover": { bottom: ".6rem" },
+            bottom: "0",
+            transition: "bottom .5s",
+            cursor: "help",
+          }}
+        >
+          {typeof icon === "string" ? (
+            <IconFromUrl url={icon} fontSize="large" />
+          ) : (
+            <SvgIcon component={icon} inheritViewBox fontSize="large" />
+          )}
+        </Box>
 
         {level && (
           <Rating

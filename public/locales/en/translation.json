@@ -16,6 +16,9 @@
     "title": "Main skils & tools",
     "description": "   Here are main techniques & tools, gained on the courses and web-documentations and tested practically."
   },
+  "certyficates": {
+    "tooltip": "View credential"
+  },
   "contact": {
     "title": "Write to me"
   }

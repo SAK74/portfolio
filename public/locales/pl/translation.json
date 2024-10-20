@@ -16,6 +16,9 @@
     "title": "Główne techniki i narzędzia",
     "description": "   Oto główne techniki i narzędzia zdobyte na kursach internetowych oraz za pomocą dokumentacji technicznej. Sprawdzone w praktycznym użyciu."
   },
+  "certyficates": {
+    "tooltip": "Zobacz poświadczenie"
+  },
   "contact": {
     "title": "Napisz do mnie"
   }

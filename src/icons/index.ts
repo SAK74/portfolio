@@ -31,3 +31,5 @@ export { default as Vite } from "assets/skils/vite.svg?react";
 export { default as Docker } from "assets/skils/docker.svg?react";
 export { default as LinkedinIcon } from "assets/skils/linkedin.svg?react";
 export { default as Aws } from "assets/skils/aws.svg?react";
+export { default as szkoła_reacta_logo } from "assets/logos/szkola-reacta_logo.svg?react";
+export { default as przeprogramowani_logo } from "assets/logos/przeprogramowani_logo_new.svg?react";
