@@ -1,5 +1,6 @@
 import { GitHub } from "@mui/icons-material";
 import { Box, Link } from "@mui/material";
+import { DARK_HEADER_BACKGROUND } from "themes";
 
 export const Footer = () => (
   <Box
@@ -9,7 +10,7 @@ export const Footer = () => (
       backgroundColor: (theme) =>
         theme.palette.mode === "light"
           ? theme.palette.primary.dark
-          : theme.palette.background.paper,
+          : DARK_HEADER_BACKGROUND,
       color: (theme) => theme.palette.text.secondary,
       py: 1,
       display: "flex",
