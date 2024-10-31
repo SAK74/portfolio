@@ -23,7 +23,7 @@ export { default as Figma } from "assets/skils/figma.svg?react";
 export { default as Photoshop } from "assets/skils/photoshop.svg?react";
 export { default as AngularMaterial } from "assets/skils/angular-material.svg?react";
 export { default as Cypress } from "assets/skils/cypress.svg?react";
-export { default as Firebase } from "assets/skils/firebase.svg?react";
+// export { default as Firebase } from "assets/skils/firebase.svg?react";
 export { default as NestJs } from "assets/skils/NestJS.svg?react";
 export { default as Prisma } from "assets/skils/prisma.svg?react";
 export { default as Rxjs } from "assets/skils/rxjs.svg?react";
