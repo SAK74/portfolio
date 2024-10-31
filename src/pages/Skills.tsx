@@ -66,7 +66,7 @@ export const SkillsPage = () => {
 
         {isLarge && (
           <Grid item sm={5} xs={false}>
-            <Card elevation={3}>
+            <Card>
               <CardHeader title={t("skils.title")} />
               <CardContent sx={{ whiteSpace: "break-spaces" }}>
                 {t("skils.description")}
