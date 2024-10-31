@@ -135,8 +135,8 @@ export const tools: SkillType[] = [
     icon: Icon.Cypress,
   },
   {
-    name: "Firebase",
-    icon: Icon.Firebase,
+    name: "Playwright",
+    icon: "https://playwright.dev/img/playwright-logo.svg",
   },
   {
     name: "Storybook",
@@ -165,5 +165,13 @@ export const envirTools: SkillType[] = [
   {
     name: "Photoshop",
     icon: Icon.Photoshop,
+  },
+  {
+    name: "OpenAI",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg",
+  },
+  {
+    name: "GitHub Actions",
+    icon: "https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg",
   },
 ];

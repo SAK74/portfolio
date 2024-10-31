@@ -52,6 +52,12 @@ export const SkillsPage = () => {
               setActiveTab(value);
             }}
             variant="fullWidth"
+            sx={{
+              position: "sticky",
+              top: 64,
+              backdropFilter: "blur(10px)",
+              zIndex: (theme) => theme.zIndex.appBar,
+            }}
           >
             <Tab label="Skills" value={"skills"} />
             <Tab label="Certyficates" value={"certyficates"} />
