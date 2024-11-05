@@ -10,7 +10,7 @@
   },
   "about": {
     "title": "O mnie...",
-    "description": "   Programowaniem zacząłem interesować się już jako nastolatek. Traktowałem to raczej jako hobby, pasję, która pozwalała mi się rozwijać i zdobywać nowe umiejętności. W końcu doszedłem do wniosku, że to co lubię może stać moim sposobem na życie.\n   Aktualnie poszukuje swojej pierwszej pracy w branzy IT (główny kierunek JS/ React/ Angular Development), gdzie będę mógł pracować z ludźmi o podobnych zainteresowaniach oraz zwiększać swoje doświadczenie.\n   Dość dobrze czuję się w wymienionych technikach, jak również dązę do zdobycia nowej wiedzy i doskonalenia zdobytych umiejętności.\nOstatnio dużo czasu tez przydzielam na doskonalenie back-endu (NodeJS, NestJS..)."
+    "description": "Programowaniem zacząłem interesować się już jako nastolatek. Traktowałem to raczej jako hobby, pasję, która pozwalała mi się rozwijać i zdobywać nowe umiejętności. Zaczynało się od BASIC i Fortran. Później Pascal na studiach... Po studiach samodzielnie opanowywałem podstawy Javy i Javascript-u.\n\n  Na pewnym etapie (ok. 3 lat temu) doszedłem do wniosku, że to co lubię może stać moim sposobem na życie. Więc wziąłem się za intensywną naukę.\n  Obecnie specjalizuję się we frontendie (JS/TS, React, NextJs, sporadycznie Angular), oraz częściowo backend (NodeJs, NestJs, Express, AWS...). Bardziej szczegółową listę można znaleźć w zakładce 'Umiejętności'.\n\n  Aktualnie poszukuje swojej pierwszej pracy w IT gdzie będę mógł wykorzystać zdobyte doświadczenie, oraz doskonalić i rozwijać nawyki."
   },
   "skils": {
     "title": "Główne techniki i narzędzia",
