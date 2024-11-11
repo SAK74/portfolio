@@ -5,7 +5,11 @@ import type { FC } from "react";
 
 export const MediaBar: FC = () => {
   return (
-    <Stack direction={"row"} spacing={8} sx={{ alignSelf: "center" }}>
+    <Stack
+      direction={"row"}
+      spacing={8}
+      sx={{ alignSelf: "center", justifyContent: "center" }}
+    >
       <Link
         href="https://www.linkedin.com/in/serhiy-kusyy/"
         target="_blank"
