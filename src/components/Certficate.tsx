@@ -34,7 +34,10 @@ export const Certyficate: FC<CertyficateType> = ({
     </Link>
   );
 
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
 
   return (
     <ListItem dense divider>
@@ -50,7 +53,7 @@ export const Certyficate: FC<CertyficateType> = ({
         secondaryTypographyProps={{ variantMapping: { body2: "div" } }}
         secondary={
           <>
-            {`issued ${issue.toLocaleDateString(undefined, {
+            {`issued ${issue.toLocaleDateString(language, {
               year: "numeric",
               month: "short",
             })}`}
