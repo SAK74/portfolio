@@ -22,7 +22,7 @@
     "react-svg-country-flags": "^0.1.2",
     "swiper": "^9.3.2",
     "use-sound": "^4.0.1",
-    "vite": "^5.4.14"
+    "vite": "^6.2.0"
   },
   "scripts": {
     "dev": "vite",
@@ -32,12 +32,12 @@
     "@types/node": "^20.10.7",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
-    "@vitejs/plugin-react-swc": "^3.6.0",
+    "@vitejs/plugin-react-swc": "^3.8.0",
     "sharp": "^0.33.5",
     "svgo": "^3.3.2",
     "typescript": "^4.9.5",
     "vite-plugin-image-optimizer": "^1.1.8",
-    "vite-plugin-svgr": "^4.2.0",
+    "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^4.3.2"
   }
 }
