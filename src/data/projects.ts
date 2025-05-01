@@ -7,6 +7,7 @@ import _node from "assets/skils/Node.js_logo.svg";
 import startAws from "assets/screens/aws_screen.png";
 import nextRickMorty_screen from "assets/screens/next-rick-morty_screen.png";
 import asyncRace_screen from "assets/screens/async-race_screen.png";
+import rest_client_screen from "assets/screens/Rest-client-screen.png";
 import { ReactNode } from "react";
 import {
   nextRickMortyProject,
@@ -101,5 +102,14 @@ export const projects: ProjectType[] = [
     gh_link: "https://github.com/SAK74/async-race-",
     description:
       "\u00a0\u00a0React project. Uses communication with own API server, Redux & RTK Query...",
+  },
+  {
+    name: "REST-client-App",
+    dateCreated: new Date(2025, 3),
+    image: rest_client_screen,
+    languages: ["next", "react", "ts"],
+    deploy: "https://rest-client-app-six.vercel.app/",
+    gh_link: "https://github.com/SAK74/rest-client-app",
+    description: "Team project to execute REST queries.",
   },
 ];
