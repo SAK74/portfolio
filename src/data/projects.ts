@@ -113,3 +113,6 @@ export const projects: ProjectType[] = [
     description: "Team project to execute REST queries.",
   },
 ];
+export default projects.sort(
+  (a, b) => b.dateCreated.getTime() - a.dateCreated.getTime()
+);
