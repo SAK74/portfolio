@@ -16,11 +16,11 @@ const globalOptions: ThemeOptions = {
       },
     },
   },
-  palette: {
-    background: {
-      paper: "inherit",
-    },
-  },
+  // palette: {
+  //   background: {
+  //     paper: "inherit",
+  //   },
+  // },
 };
 
 const darkOptions: ThemeOptions = {
@@ -28,6 +28,7 @@ const darkOptions: ThemeOptions = {
     mode: "dark",
     background: {
       default: "#454545",
+      paper: "#454545",
     },
   },
   components: {
@@ -45,6 +46,7 @@ const lightOptions: ThemeOptions = {
   palette: {
     background: {
       default: "#f2f2f2",
+      paper: "#f2f2f2",
     },
   },
   components: {
