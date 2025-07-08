@@ -14,6 +14,7 @@ import {
   nodeLibraryProject,
   startAwsProject,
 } from "./project-descriptions";
+import chat_ai_screen from "assets/screens/ai-chat_screenshot.png";
 
 export interface ProjectType {
   name: string;
@@ -111,6 +112,15 @@ export const projects: ProjectType[] = [
     deploy: "https://rest-client-app-six.vercel.app/",
     gh_link: "https://github.com/SAK74/rest-client-app",
     description: "Team project to execute REST queries.",
+  },
+  {
+    name: "Multiple-AI chat",
+    dateCreated: new Date(2025, 7),
+    image: chat_ai_screen,
+    languages: ["next", "react", "ts"],
+    deploy: "https://multiply-ai-chat.vercel.app/",
+    gh_link: "https://github.com/SAK74/multiple-ai-chat",
+    description: "Initial draft for multiple-ai agent..",
   },
 ];
 export default projects.sort(

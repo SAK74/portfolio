@@ -65,7 +65,7 @@ export const ProjectCard: FC<ProjectType> = ({
     i18n: { language },
   } = useTranslation();
   return (
-    <StyledCard sx={{ width: { lg: 300 } }} elevation={5}>
+    <StyledCard sx={{ width: { lg: 300 }, overflow: "visible" }} elevation={5}>
       <CardHeader
         title={name}
         titleTypographyProps={{ variant: "body1" }}
@@ -98,7 +98,15 @@ export const ProjectCard: FC<ProjectType> = ({
         <Tooltip title="View deployment" placement="top">
           <CardMedia
             image={image}
-            sx={{ height: 150, backgroundSize: "cover" }}
+            sx={{
+              height: 150,
+              backgroundSize: "cover",
+              ":hover": {
+                transform: "scale(1.2)",
+                borderRadius: 2,
+              },
+              transition: "all .4s",
+            }}
           />
         </Tooltip>
       </CardActionArea>

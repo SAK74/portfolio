@@ -5,6 +5,11 @@ import svgr from "vite-plugin-svgr";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
-  plugins: [react(), viteTsConfigPaths(), svgr(), ViteImageOptimizer()],
+  plugins: [
+    react(),
+    viteTsConfigPaths({ root: "." }),
+    svgr(),
+    ViteImageOptimizer(),
+  ],
   server: { host: true, port: 3000 },
 });
