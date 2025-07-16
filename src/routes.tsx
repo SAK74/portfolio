@@ -1,5 +1,20 @@
-import { RouteObject } from "react-router-dom";
-import { Layout, MainPage, SkillsPage, Projects, Contact } from "pages";
+import type { RouteObject } from "react-router-dom";
+import { Layout } from "pages";
+import { lazy, Suspense } from "react";
+import { CircularProgress } from "@mui/material";
+
+const MainPage = lazy(() =>
+  import("pages/MainPage").then((m) => ({ default: m.MainPage }))
+);
+const SkillsPage = lazy(() =>
+  import("pages/Skills").then((m) => ({ default: m.SkillsPage }))
+);
+const Projects = lazy(() =>
+  import("pages/Projects").then((m) => ({ default: m.Projects }))
+);
+const Contact = lazy(() =>
+  import("pages/Contact").then((m) => ({ default: m.Contact }))
+);
 
 export const routes: RouteObject[] = [
   {
@@ -7,20 +22,36 @@ export const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       {
-        element: <MainPage />,
+        element: (
+          <Suspense fallback={<CircularProgress />}>
+            <MainPage />
+          </Suspense>
+        ),
         index: true,
       },
       {
         path: "skils",
-        element: <SkillsPage />,
+        element: (
+          <Suspense fallback={<CircularProgress />}>
+            <SkillsPage />
+          </Suspense>
+        ),
       },
       {
         path: "projects",
-        element: <Projects />,
+        element: (
+          <Suspense fallback={<CircularProgress />}>
+            <Projects />
+          </Suspense>
+        ),
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<CircularProgress />}>
+            <Contact />
+          </Suspense>
+        ),
       },
     ],
   },
