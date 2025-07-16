@@ -12,9 +12,11 @@ import { ReactNode } from "react";
 import {
   nextRickMortyProject,
   nodeLibraryProject,
+  postTaskDescription,
   startAwsProject,
 } from "./project-descriptions";
 import chat_ai_screen from "assets/screens/ai-chat_screenshot.png";
+import posts_task from "assets/screens/screencapture-sak74-pl-Kit-Global-2025-07-16-11_18_16.png";
 
 export interface ProjectType {
   name: string;
@@ -113,6 +115,7 @@ export const projects: ProjectType[] = [
     gh_link: "https://github.com/SAK74/rest-client-app",
     description: "Team project to execute REST queries.",
   },
+
   {
     name: "Multiple-AI chat",
     dateCreated: new Date(2025, 7),
@@ -121,6 +124,15 @@ export const projects: ProjectType[] = [
     deploy: "https://multiply-ai-chat.vercel.app/",
     gh_link: "https://github.com/SAK74/multiple-ai-chat",
     description: "Initial draft for multiple-ai agent..",
+  },
+  {
+    name: "Exapled post-service",
+    dateCreated: new Date(2025, 7),
+    image: posts_task,
+    languages: ["next", "react", "ts", "redux"],
+    deploy: "https://posts-task-mu.vercel.app/",
+    gh_link: "https://github.com/SAK74/test-task-kit-global/tree/ssr",
+    description: postTaskDescription,
   },
 ];
 export default projects.sort(

@@ -34,7 +34,8 @@ export type Languages =
   | "prisma"
   | "docker"
   | "aws"
-  | "next";
+  | "next"
+  | "redux";
 
 const matched: { [Prop in Languages]: FC } = {
   angular: Icon.Angular,
@@ -48,6 +49,7 @@ const matched: { [Prop in Languages]: FC } = {
   docker: Icon.Docker,
   aws: Icon.Aws,
   next: Icon.NextIcon,
+  redux: Icon.Redux,
 };
 
 const StyledCard = styled(Card)(({ theme }) => ({}));

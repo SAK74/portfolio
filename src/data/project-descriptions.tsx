@@ -1,3 +1,5 @@
+import { List, ListItem, Typography } from "@mui/material";
+
 export const nodeLibraryProject = (
   <>
     Backend project, bases on NextJs, uses
@@ -29,6 +31,19 @@ export const nextRickMortyProject = (
     <ul>
       <li>interaction with PstgresDB through Prisma ORM</li>
       <li>authorization with AuthJS</li>
+    </ul>
+  </>
+);
+
+export const postTaskDescription = (
+  <>
+    <Typography variant="body1" variantMapping={{ body1: "h2" }}>
+      Exampled post service
+    </Typography>
+    <ul>
+      <li>Use Redux and Firebase to data management </li>
+      <li>Auth with firebase and auth.js</li>
+      <li>Sorting, searching, editing, e.t.c.</li>
     </ul>
   </>
 );
