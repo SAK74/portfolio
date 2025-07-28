@@ -121,7 +121,7 @@ export const projects: ProjectType[] = [
     dateCreated: new Date(2025, 7),
     image: chat_ai_screen,
     languages: ["next", "react", "ts"],
-    deploy: "https://multiply-ai-chat.vercel.app/",
+    deploy: "https://chat-claude-gpt-sak74-sak74s-projects.vercel.app/",
     gh_link: "https://github.com/SAK74/multiple-ai-chat",
     description: "Initial draft for multiple-ai agent..",
   },
