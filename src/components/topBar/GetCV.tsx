@@ -1,6 +1,5 @@
 import { Link } from "@mui/material";
-
-const CV_URL = "https://sak74.github.io/CV/Serhiy_Kusyy_CV.pdf";
+import { CV_URL } from "data/personals";
 
 export const GetCV = () => {
   return (
