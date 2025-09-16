@@ -22,7 +22,7 @@
     "react-svg-country-flags": "^0.1.2",
     "swiper": "^9.3.2",
     "use-sound": "^4.0.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.6"
   },
   "scripts": {
     "dev": "vite",
