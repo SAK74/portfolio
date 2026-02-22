@@ -1,0 +1,25 @@
+name: Review
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+      repository-projects: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 #required to git history access
+        name: Checkout repository
+
+      - uses: SAK74/code-review-action@master
+        name: Call action
+        with:
+          OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
+          with-comment: true # optional to make comment (default false)
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}} # reqired
