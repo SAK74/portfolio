@@ -13,12 +13,15 @@ export type CertyficateType = {
   skills?: string[];
 };
 
+const RSSchoolLogo =
+  "https://rs.school/_next/static/media/rss-logo.c19ce1b4.svg";
+
 export const certyficates: CertyficateType[] = [
   {
     title: "AWS CLOUD DEVELOPER",
     issuer: {
       name: "The Rolling Scopes School",
-      logo: "https://rs.school/assets/rss-logo-CM8B7fA7.svg",
+      logo: RSSchoolLogo,
       link: "https://rs.school/",
     },
     issue: new Date(2024, 0),
@@ -52,7 +55,7 @@ export const certyficates: CertyficateType[] = [
     title: "NODEJS 2023 Q2",
     issuer: {
       name: "The Rolling Scopes School",
-      logo: "https://rs.school/assets/rss-logo-CM8B7fA7.svg",
+      logo: RSSchoolLogo,
       link: "https://rs.school/",
     },
     issue: new Date(2023, 8),
@@ -72,7 +75,7 @@ export const certyficates: CertyficateType[] = [
     title: "ANGULAR 2023 Q1",
     issuer: {
       name: "The Rolling Scopes School",
-      logo: "https://rs.school/assets/rss-logo-CM8B7fA7.svg",
+      logo: RSSchoolLogo,
       link: "https://rs.school/",
     },
     issue: new Date(2023, 5),
@@ -83,7 +86,7 @@ export const certyficates: CertyficateType[] = [
     title: "REACT 2023 Q1",
     issuer: {
       name: "The Rolling Scopes School",
-      logo: "https://rs.school/assets/rss-logo-CM8B7fA7.svg",
+      logo: RSSchoolLogo,
       link: "https://rs.school/",
     },
     issue: new Date(2023, 5),
@@ -94,7 +97,7 @@ export const certyficates: CertyficateType[] = [
     title: "JS/FE COURSE EN 2022Q3",
     issuer: {
       name: "The Rolling Scopes School",
-      logo: "https://rs.school/assets/rss-logo-CM8B7fA7.svg",
+      logo: RSSchoolLogo,
       link: "https://rs.school/",
     },
     issue: new Date(2023, 3),

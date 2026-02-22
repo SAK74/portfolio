@@ -168,7 +168,7 @@ export const envirTools: SkillType[] = [
   },
   {
     name: "OpenAI",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg",
+    icon: Icon.OpenAiLogo,
   },
   {
     name: "GitHub Actions",
